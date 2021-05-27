@@ -1,0 +1,27 @@
+.cursor {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s ease-out;
+  z-index: 111;
+  pointer-events: none;
+  opacity: 0.4;
+  background-color: $mainColor;
+  border-radius: 50%;
+  // mix-blend-mode: difference;
+  &.click {
+    opacity: 0.2;
+    cursor: pointer;
+    transform: scale(2);
+  }
+}
+
+h2 {
+  padding: 10px;
+  font-size: 40px;
+  display: inline-block;
+  margin: 100px;
+  color: #fff !important;
+}

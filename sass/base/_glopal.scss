@@ -1,0 +1,52 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+
+  @media (max-width: 1200px) {
+    font-size: 62.5%;
+  }
+  // Default => 10 * 100 / 16 = 62.5 (1rem = 10px)
+
+  @media (max-width: 992px) {
+    font-size: 56.25%;
+  }
+  // 9 * 100 / 16 = 56.25 (1rem = 9px)
+
+  @media (max-width: 768px) {
+    font-size: 50%;
+  }
+  // 8 * 100 / 16 = 50 (1rem = 8px)
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  font-size: 2rem;
+  line-height: 1.7;
+  font-family: "Roboto", sans-serif !important;
+  font-weight: 300 !important;
+  color: #777;
+  box-sizing: border-box;
+  background-color: #101010;
+  .wrapper {
+    position: relative;
+    z-index: 20;
+  }
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: unset;
+}

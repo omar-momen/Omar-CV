@@ -1,0 +1,18 @@
+/* Start loading */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* End loading */
+
+/* Start Cursor */
+@keyframes cursorAnim {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.7);
+  }
+}
+/* Start Cursor */
