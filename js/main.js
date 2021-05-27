@@ -1,10 +1,3 @@
-/*********** Start Loading***********/
-const spinnerWrapper = document.querySelector(".spinner-wrapper");
-window.addEventListener("load", function () {
-  spinnerWrapper.parentElement.removeChild(spinnerWrapper);
-});
-/*********** Start Loading ***********/
-
 /*********** Start Cursor Control ***********/
 const cursor = document.querySelector(".cursor");
 const clickableItems = Array.from(document.querySelectorAll("a"));
@@ -27,8 +20,10 @@ clickableItems.forEach((item) => {
 /*********** Start Cursor Control ***********/
 
 /*********** Start Lines Animation ***********/
+const spinnerWrapper = document.querySelector(".spinner-wrapper");
 const linesDiv = document.querySelector(".lines");
 document.addEventListener("DOMContentLoaded", function () {
+  spinnerWrapper.parentElement.removeChild(spinnerWrapper);
   linesDiv.classList.add("finish");
   setTimeout(() => {
     linesDiv.classList.add("ready");
