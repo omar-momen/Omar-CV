@@ -24,10 +24,12 @@ const spinnerWrapper = document.querySelector(".spinner-wrapper");
 const linesDiv = document.querySelector(".lines");
 $(window).on("load", function () {
   spinnerWrapper.parentElement.removeChild(spinnerWrapper);
-  linesDiv.classList.add("finish");
+  setTimeout(() => {
+    linesDiv.classList.add("finish");
+  }, 500);
   setTimeout(() => {
     linesDiv.classList.add("ready");
-  }, 1000);
+  }, 1500);
 });
 /*********** End Lines Animation ***********/
 
