@@ -22,7 +22,7 @@ clickableItems.forEach((item) => {
 /*********** Start Lines Animation ***********/
 const spinnerWrapper = document.querySelector(".spinner-wrapper");
 const linesDiv = document.querySelector(".lines");
-document.addEventListener("DOMContentLoaded", function () {
+$(window).on("load", function () {
   spinnerWrapper.parentElement.removeChild(spinnerWrapper);
   linesDiv.classList.add("finish");
   setTimeout(() => {
