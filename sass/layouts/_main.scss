@@ -1,6 +1,9 @@
 main.wrapper {
   .container {
     max-width: 1490px;
+    @media (max-width: 473px) {
+      padding-left: 2rem;
+    }
     .centerMiddle {
       display: flex;
       .img {
