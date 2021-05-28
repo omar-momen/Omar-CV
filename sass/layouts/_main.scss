@@ -144,11 +144,13 @@ main.wrapper {
       a {
         color: inherit;
         cursor: pointer;
-        &:hover {
-          span {
-            i {
-              transform: scale(1.5);
-              color: #fff;
+        @media (min-width: 992px) {
+          &:hover {
+            span {
+              i {
+                transform: scale(1.5);
+                color: #fff;
+              }
             }
           }
         }

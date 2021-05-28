@@ -72,13 +72,15 @@
               font-size: 1.6rem;
               color: #bdbdbd;
               font-weight: bold;
-              &:hover {
-                color: #fff;
-                span.is_visible {
-                  transform: translateY(100%);
-                }
-                span.is_invisble {
-                  top: 0;
+              @media (min-width: 992px) {
+                &:hover {
+                  color: #fff;
+                  span.is_visible {
+                    transform: translateY(100%);
+                  }
+                  span.is_invisble {
+                    top: 0;
+                  }
                 }
               }
               & > span {
@@ -150,13 +152,15 @@
                   font-size: 1.3rem;
                   color: #bdbdbd;
                   font-weight: bold;
-                  &:hover {
-                    color: #fff;
-                    span.is_visible {
-                      transform: translateY(100%);
-                    }
-                    span.is_invisble {
-                      top: 0;
+                  @media (min-width: 992px) {
+                    &:hover {
+                      color: #fff;
+                      span.is_visible {
+                        transform: translateY(100%);
+                      }
+                      span.is_invisble {
+                        top: 0;
+                      }
                     }
                   }
                   & > span {
@@ -253,6 +257,24 @@
     .nav {
       .nav-container {
         justify-content: space-between;
+        .logo {
+          a {
+            &:hover {
+              span.is_visible {
+              }
+              span.is_invisble {
+              }
+            }
+            span.is_visible {
+              opacity: 0;
+              visibility: hidden;
+              pointer-events: none;
+            }
+            span.is_invisble {
+              top: 0;
+            }
+          }
+        }
         .links-menu {
           opacity: 0;
           visibility: hidden;
