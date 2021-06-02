@@ -1,15 +1,11 @@
 .header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  padding: 1rem 0;
-  color: #fff;
-  z-index: 50;
+  @include fixedDefault;
+  color: $mainColor-white;
+  z-index: 60;
   transition: all 0.5s ease-in-out;
   .nav {
-    .nav-container {
-      max-width: 1490px;
+    .container-fluid {
+      padding: 1rem 3rem;
       display: flex;
       position: relative;
       flex-wrap: wrap;
@@ -21,7 +17,7 @@
           position: relative;
           overflow: hidden;
           font-size: 3rem;
-          color: #fff;
+          color: $mainColor-white;
           &:hover {
             span.is_visible {
               transform: translateY(100%);
@@ -62,7 +58,7 @@
             position: relative;
             &.active {
               a {
-                color: #fff;
+                color: $mainColor-white;
               }
             }
             a {
@@ -70,11 +66,11 @@
               position: relative;
               overflow: hidden;
               font-size: 1.6rem;
-              color: #bdbdbd;
+              color: $mainColor-gray;
               font-weight: bold;
               @media (min-width: 992px) {
                 &:hover {
-                  color: #fff;
+                  color: $mainColor-white;
                   span.is_visible {
                     transform: translateY(100%);
                   }
@@ -120,7 +116,7 @@
               top: 5.5rem;
               padding: 1rem 1rem 0;
               width: 19rem;
-              background: #1e1e1e;
+              background: $mainBgColor-3;
               z-index: 50;
               opacity: 0;
               visibility: hidden;
@@ -134,7 +130,7 @@
                 left: 1rem;
                 border-width: 1.5rem;
                 border-style: solid;
-                border-color: transparent transparent #1e1e1e transparent;
+                border-color: transparent transparent $mainBgColor-3 transparent;
               }
               .sub-menu-link {
                 &:not(:last-child) {
@@ -142,7 +138,7 @@
                 }
                 &.active {
                   a {
-                    color: #fff;
+                    color: $mainColor-white;
                   }
                 }
                 a {
@@ -150,11 +146,11 @@
                   position: relative;
                   overflow: hidden;
                   font-size: 1.3rem;
-                  color: #bdbdbd;
+                  color: $mainColor-gray;
                   font-weight: bold;
                   @media (min-width: 992px) {
                     &:hover {
-                      color: #fff;
+                      color: $mainColor-white;
                       span.is_visible {
                         transform: translateY(100%);
                       }
@@ -230,7 +226,7 @@
           &::before {
             width: 3rem;
             height: 2px;
-            background-color: #fff;
+            background-color: $mainColor-white;
             transition: all 0.1s linear;
           }
           &::after,
@@ -251,11 +247,11 @@
   }
   @media (max-width: 992px) {
     &.menuIsActive {
-      background: rgb(11, 12, 0);
+      background: $mainBgColor-1;
       height: 100vh;
     }
     .nav {
-      .nav-container {
+      .container-fluid {
         justify-content: space-between;
         .logo {
           a {

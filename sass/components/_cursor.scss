@@ -1,4 +1,5 @@
 .cursor {
+  display: none; /* Temp */
   width: 26px;
   height: 26px;
   border-radius: 50%;
@@ -8,7 +9,7 @@
   z-index: 111;
   pointer-events: none;
   opacity: 0.4;
-  background-color: $mainColor;
+  background-color: $mainColor-green;
   border-radius: 50%;
   // mix-blend-mode: difference;
   @media (max-width: 992px) {
@@ -26,5 +27,5 @@ h2 {
   font-size: 40px;
   display: inline-block;
   margin: 100px;
-  color: #fff !important;
+  color: $mainColor-white;
 }

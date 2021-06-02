@@ -22,10 +22,26 @@ clickableItems.forEach((item) => {
 /*********** Start Lines Animation ***********/
 const spinnerWrapper = document.querySelector(".spinner-wrapper");
 const linesDiv = document.querySelector(".lines");
+
+function waitBeforeNavigate(ev) {
+  ev.preventDefault();
+  const goTo = this.getAttribute("href");
+  linesDiv.classList.remove("ready");
+  linesDiv.classList.remove("start");
+  linesDiv.classList.add("no-lines");
+  setTimeout(() => {
+    window.location = goTo;
+  }, 1500);
+}
+clickableItems.forEach((EL) =>
+  EL.addEventListener("click", waitBeforeNavigate)
+);
+
 $(window).on("load", function () {
   spinnerWrapper.parentElement.removeChild(spinnerWrapper);
   setTimeout(() => {
     linesDiv.classList.add("finish");
+    linesDiv;
   }, 500);
   setTimeout(() => {
     linesDiv.classList.add("ready");
@@ -66,38 +82,3 @@ $(".links .link .opanAndClose").click(function () {
   $(this).parent().find(".sub-menu").slideToggle();
 });
 /*********** End Header ***********/
-new TypeIt("#typeElement", {
-  speed: 100,
-  loop: true,
-  html: true,
-  cursor: false,
-})
-  .type("I Love <span class='letterColored'>Javascript</span>")
-  .pause(1500)
-  .delete()
-  .type("I Code Cool <span class='letterColored'>websites</span>")
-  .pause(1500)
-  .delete()
-  .type("I Code SQL In <span class='letterColored'>lowercase &#128513</span>")
-  .pause(1500)
-  .delete()
-  .go();
-
-/*
-const boxItem = document.querySelector(".box-item");
-const inkDiv = document.querySelector(".ink");
-boxItem.addEventListener("mouseenter", (e) => {
-  inkDiv.style.left =
-    e.pageX - e.target.offsetLeft - inkDiv.offsetWidth / 2 + "px";
-  inkDiv.style.top =
-    e.pageY - e.target.offsetTop - inkDiv.offsetHeight / 2 + "px";
-  boxItem.classList.add("hovered");
-});
-boxItem.addEventListener("mouseleave", (e) => {
-  inkDiv.style.left =
-    e.pageX - e.target.offsetLeft - inkDiv.offsetWidth / 2 + "px";
-  inkDiv.style.top =
-    e.pageY - e.target.offsetTop - inkDiv.offsetHeight / 2 + "px";
-  boxItem.classList.remove("hovered");
-});
-*/

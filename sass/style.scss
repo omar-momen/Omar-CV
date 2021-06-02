@@ -2,6 +2,7 @@
 @import "base/variables";
 @import "base/glopal";
 @import "base/typography";
+@import "base/mixins";
 
 // Others
 @import "others/animations";
@@ -12,8 +13,12 @@
 @import "components/lines";
 @import "components/spinner";
 @import "components/_boxItem";
+@import "components/_followMeBox";
 
 // Layout
 @import "layouts/header";
 @import "layouts/footer";
 @import "layouts/main";
+
+// pages
+@import "pages/portfolio";

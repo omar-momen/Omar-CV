@@ -1,173 +1,157 @@
-main.wrapper {
+.homePage {
+  overflow: hidden;
   height: 100vh;
-  .container {
-    max-width: 1490px;
-    height: inherit;
-    @media (max-width: 473px) {
-      padding-left: 2rem;
+  position: relative;
+}
+main.wrapper {
+  .basicHeader {
+    height: 100vh;
+    position: relative;
+    z-index: 55;
+    .centerHead {
+      @include centerPosition;
     }
-    .centerMiddle {
+    .subFooter {
+      position: absolute;
+      bottom: 5rem;
+      left: 0;
+      width: 100%;
       display: flex;
-      height: 80%;
-      .img {
-        width: 46%;
-        .image {
-          background-image: url(../img/pic2.jpg);
-          background-position: 50% 13%;
-          background-repeat: no-repeat;
-          background-size: cover;
-          clip-path: polygon(31% 0, 100% 25%, 61% 100%, 0 93%);
-          position: relative;
-          height: 100%;
-          top: -2rem;
-          left: 16rem;
-          width: 85%;
-          filter: grayscale(1);
-        }
-      }
-      .text {
-        align-self: flex-end;
-        flex-grow: 1;
-        padding-bottom: 10rem;
-        h3 {
-          color: #fff;
-          width: 76%;
-          font-size: 2.5rem;
-          font-weight: 100 !important;
-          span.coloredSpan {
-            font-weight: 700 !important;
-            color: $mainColor;
+      padding-left: 4rem;
+      justify-content: space-around;
+      nav.nav {
+        li {
+          a {
+            color: #fff;
           }
-        }
-      }
-      @media (max-width: 1200px) {
-        .img {
-          width: 56%;
-          .image {
-            top: 1rem;
-            left: 8rem;
-            width: 100%;
-          }
-        }
-        .text {
-          padding: 0;
-          h3 {
-            width: 80%;
-          }
-        }
-      }
-      @media (max-width: 992px) {
-        .img {
-          width: 100%;
-        }
-      }
-      @media (max-width: 767.98px) {
-        .img {
-          .image {
-          }
-        }
-        .text {
-          h3 {
-          }
-        }
-      }
-      @media (max-width: 767px) {
-        flex-direction: column;
-        .img {
-          width: 100%;
-          height: 73vh;
-          .image {
-            clip-path: polygon(25% 0, 100% 25%, 80% 100%, 0 85%);
-            width: 77%;
-            height: 86%;
-          }
-        }
-        .text {
-          width: 80%;
-          align-self: flex-start;
-          h3 {
-            font-size: 3.5rem;
-            line-height: 1.7;
-          }
-        }
-      }
-      @media (max-width: 473px) {
-        .img {
-          height: 68vh;
-          .image {
-            width: 100%;
-            height: 86%;
-            top: 7rem;
-            left: -1rem;
-          }
-        }
-        .text {
-          padding-top: 3rem;
-          width: 80%;
-          h3 {
-            font-size: 2.6rem;
-          }
-        }
-      }
-    }
-  }
-  .followMeBox {
-    position: fixed;
-    right: -15rem;
-    bottom: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .followText {
-      transform: rotate(90deg);
-      padding-right: 29rem;
-      position: relative;
-      z-index: 5;
-      span {
-        color: #bbb;
-        font-size: 2rem;
-        &::after {
-          content: "";
-          position: absolute;
-          top: 50%;
-          right: 20rem;
-          width: 50px;
-          height: 1px;
-          background: #fff;
-        }
-      }
-    }
-    .iconBox {
-      display: flex;
-      flex-direction: column;
-      z-index: 6;
-      a {
-        color: inherit;
-        cursor: pointer;
-        @media (min-width: 992px) {
-          &:hover {
-            span {
-              i {
-                transform: scale(1.5);
-                color: #fff;
-              }
+          &.active {
+            a {
+              color: $mainColor-gray;
             }
           }
         }
-        span {
-          display: block;
-          padding: 1rem;
-          i {
-            transition: all 0.2s linear;
-            font-size: 2.5rem;
-          }
+      }
+      .icon {
+        display: none;
+        i {
+          font-size: 3rem;
+          color: $mainColor-green;
         }
       }
+      @media (max-width: 473px) {
+        justify-content: space-between;
+        padding-right: 10rem;
+      }
     }
-    @media (max-width: 473px) {
-      right: 1rem;
-      .followText {
-        display: none;
+    .homePage.container {
+      max-width: 1490px;
+      height: inherit;
+      @media (max-width: 473px) {
+        padding-left: 2rem;
+      }
+      .centerMiddle {
+        display: flex;
+        height: 80%;
+        .img {
+          width: 46%;
+          .image {
+            background-image: url(../img/pic2.jpg);
+            background-position: 50% 13%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            clip-path: polygon(31% 0, 100% 25%, 61% 100%, 0 93%);
+            position: relative;
+            height: 100%;
+            top: -2rem;
+            left: 16rem;
+            width: 85%;
+            filter: grayscale(1);
+          }
+        }
+        .text {
+          align-self: flex-end;
+          flex-grow: 1;
+          padding-bottom: 10rem;
+          h3 {
+            color: $mainColor-white;
+            width: 76%;
+            font-size: 2.5rem;
+            font-weight: 100 !important;
+            span.coloredSpan {
+              font-weight: 700 !important;
+              color: $mainColor-green;
+            }
+          }
+        }
+        @media (max-width: 1200px) {
+          .img {
+            width: 56%;
+            .image {
+              top: 1rem;
+              left: 8rem;
+              width: 100%;
+            }
+          }
+          .text {
+            padding: 0;
+            h3 {
+              width: 80%;
+            }
+          }
+        }
+        @media (max-width: 992px) {
+          .img {
+            width: 100%;
+          }
+        }
+        @media (max-width: 767.98px) {
+          .img {
+            .image {
+            }
+          }
+          .text {
+            h3 {
+            }
+          }
+        }
+        @media (max-width: 767px) {
+          flex-direction: column;
+          .img {
+            width: 100%;
+            height: 73vh;
+            .image {
+              clip-path: polygon(25% 0, 100% 25%, 80% 100%, 0 85%);
+              width: 77%;
+              height: 86%;
+            }
+          }
+          .text {
+            width: 80%;
+            align-self: flex-start;
+            h3 {
+              font-size: 3.5rem;
+              line-height: 1.7;
+            }
+          }
+        }
+        @media (max-width: 473px) {
+          .img {
+            height: 68vh;
+            .image {
+              width: 100%;
+              height: 86%;
+              top: 7rem;
+              left: -1rem;
+            }
+          }
+          .text {
+            padding-top: 3rem;
+            width: 80%;
+            h3 {
+              font-size: 2.6rem;
+            }
+          }
+        }
       }
     }
   }

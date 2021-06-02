@@ -1,19 +1,26 @@
-.homePage {
-  footer.footer {
-    height: 20%;
-    padding-top: 5rem;
+footer.footer {
+  height: 20%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 90%;
+  z-index: 50;
+  .container-fluid {
     display: flex;
+    height: 100%;
+    padding: 1rem 3rem;
+    align-items: center;
     .info {
       width: fit-content;
       display: flex;
       flex-direction: column;
       & > span {
         display: block;
-        font-size: 1.5rem;
-        color: #bbb;
+        font-size: 1.2rem;
+        color: $mainColor-gray;
         span.letterColored {
           font-weight: bold;
-          color: $mainColor;
+          color: $mainColor-green;
         }
       }
     }
@@ -22,10 +29,10 @@
       padding-left: 3rem;
       h3 {
         margin: 0;
-        color: #fff;
+        color: $mainColor-white;
         font-size: 6rem;
         span.letterColored {
-          color: $mainColor;
+          color: $mainColor-green;
           font-weight: 700 !important;
         }
       }
@@ -45,7 +52,7 @@
       }
     }
     @media (max-width: 767px) {
-      padding: 0;
+      padding: 0 1rem;
       .info {
         display: none;
       }

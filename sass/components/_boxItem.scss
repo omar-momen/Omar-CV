@@ -1,21 +1,8 @@
 .box-item {
-  width: 40rem;
-  background-color: green;
-  position: relative;
-  overflow: hidden;
-  &.hovered {
-    .image {
-      a.projectLink {
-        .lazyLayer {
-          .ink {
-            transform: scale(3);
-          }
-          .icon {
-            opacity: 1;
-          }
-        }
-      }
-    }
+  padding: 0 5rem 10rem;
+  width: 50%;
+  @media (max-width: 992px) {
+    width: 100%;
   }
   .image {
     position: relative;
@@ -40,12 +27,20 @@
         position: absolute;
         left: 0;
         top: 0;
+        &.hovered {
+          .ink {
+            transform: scale(3);
+          }
+          .icon {
+            opacity: 1;
+          }
+        }
         .ink {
           width: 100%;
           height: 100%;
           display: block;
           position: absolute;
-          background: #4bffa5;
+          background: $mainColor-green;
           transform: scale(0);
           transition: transform 2s cubic-bezier(0.165, 0.85, 0.45, 1) 0s;
           border-radius: 100%;
@@ -65,7 +60,7 @@
           opacity: 0;
           i {
             font-size: 40px;
-            color: #000;
+            color: $mainBgColor-3;
           }
         }
       }
